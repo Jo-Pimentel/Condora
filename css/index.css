@@ -24,6 +24,13 @@ section {
     gap: 60px;
 }
 
+@media screen and (max-width: 768px) {
+    #conversores, #calculadoras {
+        flex-direction: column;
+        gap: 60px;
+    }
+}
+
 .ferramenta {
     border: 2px solid #000;
     height: 130px;
