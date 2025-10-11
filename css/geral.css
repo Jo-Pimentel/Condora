@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Convergence&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Convergence", sans-serif;
+}
+
+header {
+    text-align: center;
+    width: 100%;
+    background-color: rgb(131,111,255);
+    font-size: 25px;
+    margin-top: -7px;
+    padding: 15px 0;
+}
+
+#conteudo_pagina {
+    padding: 16px;
+    margin: 0 auto;
+    max-width: 1200px;
+    text-align: center;
+}

@@ -1,0 +1,42 @@
+section, main {
+    background-color: rgb(173,216,230);
+    border-radius: 10px;
+    font-size: 20px;
+    padding: 20px;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+#ferramentas {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+#conversores, #calculadoras {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 60px;
+}
+
+.ferramenta {
+    border: 2px solid #000;
+    height: 130px;
+    width: 150px;
+    background-color: rgb(255, 255, 255);
+}
+
+.ferramenta img {
+    height: 100px;
+}
+
+.ferramenta a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: bold;
+}
