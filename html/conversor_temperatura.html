@@ -3,9 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../imagens/conversor_temperatura/logo_conversor_temperatura.png">
+    <link rel="stylesheet" href="../css/geral.css">
+    <link rel="stylesheet" href="../css/conversor_temperatura.css">
     <title>Conversor de temperatura</title>
 </head>
 <body>
-    
+    <header>
+        <h1>Condora</h1>
+        <span>Conversor de temperatura</span>
+    </header>
+
+    <div id="conteudo_pagina">
+        <section>
+            <p>Com essa ferramenta, você poderá converter qualquer temperatura válida de uma escala termométrica para outra.</p>
+
+            <p>Uma temperatura válida é aquela que não ultrapassa o zero absoluto da escala em que se encontra, inicialmente.</p>
+
+            <p>As escalas disponíveis são: Celsius, Farenheit e Kelvin.</p>
+
+            <p>Os zeros absolutos das escalas são, respectivamente: -273,15°C, -459,67°F e 0 K.</p>
+        </section> <br>
+
+        <main>
+            <label for="temperatura_inicial">Digite o valor da temperatura que quer converter</label> <br>
+            <input type="number" id="temperatura_inicial"> <br><br>
+
+            <label for="escala_atual">Escolha a escala atual da temperatura informada</label> <br>
+            <select id="escala_atual">
+                <option value="Celsius">Celsius</option>
+                <option value="Farenheit">Farenheit</option>
+                <option value="Kelvin">Kelvin</option>
+            </select> <br><br>
+
+            <label for="escala_conversao">Escolha a escala que a temperatura será convertida</label> <br>
+            <select id="escala_conversao" disabled>
+                <option value="Celsius">Celsius</option>
+                <option value="Farenheit">Farenheit</option>
+                <option value="Kelvin">Kelvin</option>
+            </select> <br><br>
+
+            <button id="btn_converter_temperatura" disabled>Converter para Celsius</button>
+        </main>
+    </div>
+
+    <script src="../javascript/conversor_temperatura.js"></script>
 </body>
 </html>

@@ -1,3 +1,7 @@
+header {
+    background-color: rgb(173,216,230);
+}
+
 section, main {
     background-color: rgb(173,216,230);
     border-radius: 10px;
@@ -44,7 +48,7 @@ section {
 .ferramenta {
     border: 2px solid rgb(0, 0, 0);
     border-radius: 5px;
-    height: 130px;
+    height: 131.5px;
     width: 150px;
     background-color: rgb(255, 255, 255);
 }
@@ -54,9 +58,32 @@ section {
 }
 
 .ferramenta a {
-    color: rgb(0, 0, 0);
     text-decoration: none;
     font-weight: bold;
+}
+
+#conversor_velocidade a {
+    color: rgb(0,191,255);
+}
+
+#conversor_temperatura a {
+    color: rgb(255, 0, 0);
+}
+
+#conversor_moedas a {
+    color: rgb(255,215,0);
+}
+
+#calculadora_media a {
+    color: rgb(79,79,79);
+}
+
+#calculadora_juros a {
+    color: rgb(255,165,0);
+}
+
+#calculadora_imc a {
+    color: rgb(255,69,0);
 }
 
 footer {
