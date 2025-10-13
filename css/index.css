@@ -57,32 +57,32 @@ section {
     height: 100px;
 }
 
-.ferramenta a {
+.ferramenta span {
     text-decoration: none;
     font-weight: bold;
 }
 
-#conversor_velocidade a {
+#conversor_velocidade span {
     color: rgb(0,191,255);
 }
 
-#conversor_temperatura a {
+#conversor_temperatura span {
     color: rgb(255, 0, 0);
 }
 
-#conversor_moedas a {
+#conversor_moedas span {
     color: rgb(255,215,0);
 }
 
-#calculadora_media a {
+#calculadora_media span {
     color: rgb(79,79,79);
 }
 
-#calculadora_juros a {
+#calculadora_juros span {
     color: rgb(255,165,0);
 }
 
-#calculadora_imc a {
+#calculadora_imc span {
     color: rgb(255,69,0);
 }
 
