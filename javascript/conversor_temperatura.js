@@ -6,37 +6,19 @@ const escala_conversao = document.querySelector("#escala_conversao");
 
 const btn_converter_temperatura = document.querySelector("#btn_converter_temperatura");
 
-const escalas_termometricas = ["Celsius", "Farenheit", "Kelvin"];
+let zero_absoluto = -273.15;
 
-const zeros_absolutos = [-273.15, -459.67, 0];
-
-let temperatura_valida, temperatura_convertida;
-
-temperatura_inicial.addEventListener("input", () => {
-    let zero_absoluto;
-
-    for(let i = 0; i < 3; i++) {
-        if(escalas_termometricas.indexOf(escala_atual.value) == zeros_absolutos.indexOf(zeros_absolutos[i])) {
-            zero_absoluto = zeros_absolutos[i];
-        }
+escala_atual.addEventListener("change", () => {
+    if(escala_atual.value == "Celsius") {
+        zero_absoluto = -273.15;
     }
 
-    if(temperatura_inicial.value < zero_absoluto) {
-        setTimeout(() => {
-            temperatura_inicial.value = "";
+    if(escala_atual.value == "Farenheit") {
+        zero_absoluto = -459.67;
+    }
 
-            temperatura_valida = false;
-
-            escala_conversao.setAttribute("disabled", true);
-            btn_converter_temperatura.setAttribute("disabled", true);
-        }, 1000)
-    } else {
-        temperatura_valida = true;
-
-        setTimeout(() => {
-            escala_conversao.removeAttribute("disabled");
-            btn_converter_temperatura.removeAttribute("disabled");
-        }, 1000)
+    if(escala_atual.value == "Kelvin") {
+        zero_absoluto = 0;
     }
 })
 
@@ -45,12 +27,33 @@ escala_conversao.addEventListener("change", () => {
 })
 
 btn_converter_temperatura.addEventListener("click", () => {
-    if(escala_atual.value == "Celsius") {
-        if(escala_atual.value == "Farenheit") {
+    let temperatura_convertida;
 
+    if(escala_atual.value == escala_conversao.value) {
+        alert("É impossível converter uma temperatura para a escala que ela já está.");
+    } else if(temperatura_inicial.value < zero_absoluto) {
+        alert(`Temperatura inválida para ${escala_atual.value}, pois ultrapassa o valor de ${zero_absoluto}.`);
+    } else {
+        if(escala_atual.value == "Celsius") {
+            if(escala_conversao.value == "Farenheit") {
+                temperatura_convertida = ((parseInt(temperatura_inicial.value) * 9) + (5 * 32)) / 5;
+            } else {
+                temperatura_convertida = parseInt(temperatura_inicial.value) + 273;
+            }
+        } else if(escala_atual.value == "Farenheit") {
+            if(escala_conversao.value == "Celsius") {
+                temperatura_convertida = ((parseInt(temperatura_inicial.value) * 5) - (32 * 5)) / 9;
+            } else {
+                temperatura_convertida = (((parseInt(temperatura_inicial.value) * 5) - (32 * 5)) + (273 * 9)) / 9;
+            }
         } else {
-            temperatura_convertida = parseInt(temperatura_inicial.value) + 273;
-            alert(`${temperatura_convertida} K`);
+            if(escala_conversao.value == "Celsius") {
+                temperatura_convertida = parseInt(temperatura_inicial.value) - 273;
+            } else {
+                temperatura_convertida = (((parseInt(temperatura_inicial.value) * 9) - (273 * 9)) + (32 * 5)) / 5;
+            }
         }
     }
+
+    alert(temperatura_convertida);
 })
