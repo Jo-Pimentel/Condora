@@ -31,6 +31,8 @@ btn_converter_temperatura.addEventListener("click", () => {
 
     if(escala_atual.value == escala_conversao.value) {
         alert("É impossível converter uma temperatura para a escala que ela já está.");
+    } else if(!temperatura_inicial.value) {
+        alert("Defina um valor para a temperatura que será convertida.");
     } else if(temperatura_inicial.value < zero_absoluto) {
         alert(`Temperatura inválida para ${escala_atual.value}, pois ultrapassa o valor de ${zero_absoluto}.`);
     } else {
@@ -54,6 +56,4 @@ btn_converter_temperatura.addEventListener("click", () => {
             }
         }
     }
-
-    alert(temperatura_convertida);
 })
