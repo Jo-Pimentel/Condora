@@ -26,26 +26,30 @@
         </section> <br>
 
         <main>
-            <label for="temperatura_inicial">Digite o valor da temperatura que quer converter</label> <br>
-            <input type="number" id="temperatura_inicial"> <br><br>
+            <div>
+                <label for="temperatura_inicial">Digite o valor da temperatura que quer converter</label> <br>
+                <input type="number" id="temperatura_inicial"> <br><br>
 
-            <label for="escala_atual">Escolha a escala atual da temperatura informada</label> <br>
-            <select id="escala_atual" class="selecionar_escala">
-                <option>Celsius</option>
-                <option>Farenheit</option>
-                <option>Kelvin</option>
-            </select> <br><br>
+                <label for="escala_atual">Escolha a escala atual da temperatura informada</label> <br>
+                <select id="escala_atual" class="selecionar_escala">
+                    <option>Celsius</option>
+                    <option>Farenheit</option>
+                    <option>Kelvin</option>
+                </select> <br><br>
 
-            <label for="escala_conversao">Escolha a escala que a temperatura será convertida</label> <br>
-            <select id="escala_conversao" class="selecionar_escala">
-                <option>Celsius</option>
-                <option>Farenheit</option>
-                <option>Kelvin</option>
-            </select> <br><br>
+                <label for="escala_conversao">Escolha a escala que a temperatura será convertida</label> <br>
+                <select id="escala_conversao" class="selecionar_escala">
+                    <option>Celsius</option>
+                    <option>Farenheit</option>
+                    <option>Kelvin</option>
+                </select> <br><br>
 
-            <button id="btn_converter_temperatura">Converter para Celsius</button>
+                <button id="btn_converter_temperatura">Converter para Celsius</button> <br>
+            </div>
 
-            <div id="resposta_temperatura_convertida"></div>
+            <div id="conversao">
+                <p></p>
+            </div>
         </main>
     </div>
 

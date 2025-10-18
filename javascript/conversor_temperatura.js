@@ -6,7 +6,7 @@ const escala_conversao = document.querySelector("#escala_conversao");
 
 const btn_converter_temperatura = document.querySelector("#btn_converter_temperatura");
 
-let zero_absoluto = -273.15;
+let zero_absoluto = -273.15, img_classificacao_temperatura;
 
 escala_atual.addEventListener("change", () => {
     if(escala_atual.value == "Celsius") {
@@ -27,29 +27,41 @@ escala_conversao.addEventListener("change", () => {
 })
 
 btn_converter_temperatura.addEventListener("click", () => {
-    let temperatura_convertida;
+    let temperatura_convertida, simbolo_escala;
 
     if(escala_atual.value == "Celsius") {
         if(escala_conversao.value == "Farenheit") {
             temperatura_convertida = ((parseInt(temperatura_inicial.value) * 9) + (5 * 32)) / 5;
+
+            simbolo_escala = "°F";
         } else {
             temperatura_convertida = parseInt(temperatura_inicial.value) + 273;
+
+            simbolo_escala = "K";
         }
     } else if(escala_atual.value == "Farenheit") {
         if(escala_conversao.value == "Celsius") {
             temperatura_convertida = ((parseInt(temperatura_inicial.value) * 5) - (32 * 5)) / 9;
+
+            simbolo_escala = "°C";
         } else {
             temperatura_convertida = (((parseInt(temperatura_inicial.value) * 5) - (32 * 5)) + (273 * 9)) / 9;
+
+            simbolo_escala = "K";
         }
     } else {
         if(escala_conversao.value == "Celsius") {
             temperatura_convertida = parseInt(temperatura_inicial.value) - 273;
+
+            simbolo_escala = "°C";
         } else {
             temperatura_convertida = (((parseInt(temperatura_inicial.value) * 9) - (273 * 9)) + (32 * 5)) / 5;
+
+            simbolo_escala = "°F";
         }
     }
 
-    document.querySelector("#resposta_temperatura_convertida").textContent = temperatura_convertida;
+    document.querySelector("#conversao").textContent = temperatura_convertida + simbolo_escala;
 
     try {
         if(escala_atual.value == escala_conversao.value) throw "É impossível converter uma temperatura para a escala que ela já está.";
@@ -58,6 +70,6 @@ btn_converter_temperatura.addEventListener("click", () => {
 
         if(temperatura_inicial.value < zero_absoluto) throw `Temperatura inválida para ${escala_atual.value}, pois ultrapassa o valor de ${zero_absoluto}`;
     } catch(erro) {
-        document.querySelector("#resposta_temperatura_convertida").textContent = erro;
+        document.querySelector("#conversao").textContent = erro;
     }
 })
