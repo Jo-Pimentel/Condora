@@ -17,6 +17,10 @@ header {
     padding: 15px 0;
 }
 
+#titulo {
+    display: flex;
+    flex-direction: column;
+}
 #barra_menu img {
     height: 45px;
     width: 45px;
