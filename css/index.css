@@ -51,6 +51,10 @@ section {
     height: 131.5px;
     width: 150px;
     background-color: rgb(255, 255, 255);
+
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 .ferramenta img {
