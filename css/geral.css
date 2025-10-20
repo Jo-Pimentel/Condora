@@ -20,6 +20,7 @@ header {
 #titulo {
     display: flex;
     flex-direction: column;
+    
 }
 #barra_menu img {
     height: 45px;
