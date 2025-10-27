@@ -8,16 +8,20 @@ const btn_converter_temperatura = document.querySelector("#btn_converter_tempera
 
 let zero_absoluto = -273.15, img_classificacao_temperatura;
 
+function classificar_temperatura(param_escala, param_temperatura) {
+    if(param_escala.value == "Celsius") {
+        if(param_temperatura > 25) {
+            
+        }
+    }
+}
+
 escala_atual.addEventListener("change", () => {
     if(escala_atual.value == "Celsius") {
         zero_absoluto = -273.15;
-    }
-
-    if(escala_atual.value == "Farenheit") {
+    } else if(escala_atual.value == "Farenheit") {
         zero_absoluto = -459.67;
-    }
-
-    if(escala_atual.value == "Kelvin") {
+    } else {
         zero_absoluto = 0;
     }
 })

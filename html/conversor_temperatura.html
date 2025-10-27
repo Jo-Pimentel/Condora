@@ -10,27 +10,52 @@
 </head>
 <body>
     <header>
-        <div id="barra_menu">
-            <img src="../imagens/icone_menu.png" alt="Ícone de menu">
-        </div>
-
         <div id="titulo">
             <h1>Condora🌡️</h1>
             <span>Conversor de temperatura</span>
         </div>
+
+        <div id="barra_menu">
+            <h2>&excl;</h2>
+        </div>
+
+        <!-- <button id="link_github">
+            <a href="https://github.com/Jo-Pimentel/Condora.git" target="_blank"><img src="../imagens/logo_github.png" alt="Logo do Github"></a>
+        </button> -->
     </header>
 
     <div id="menu" class="menu_fechado">
+        <hr>
+
         <details>
             <summary>Ferramenta</summary>
 
-            <ul>
-                <p><a href="#sobre_ferramenta">Sobre a ferramenta</a></p>
-            </ul>
+            <nav>
+                <p><a href="#sobre_ferramenta" class="link_interno">Sobre a ferramenta</a></p>
+            </nav>
         </details>
 
         <details>
-            <summary>Geral</summary>
+            <summary>Outras ferramentas</summary>
+
+            <details class="menu_ferramentas">
+                <summary>Conversores</summary>
+
+                <nav>
+                    <a href="conversor_velocidade.html">Conversor de Velocidade👟</a>
+                    <a href="conversor_moedas.html">Conversor de moedas🪙</a>
+                </nav>
+            </details> <hr>
+
+            <details class="menu_ferramentas">
+                <summary>Calculadoras</summary>
+
+                <nav>
+                    <a href="calculadora_media.html">Calculadora de média</a>
+                    <a href="calculadora_juros.html">Calculadora de juros</a>
+                    <a href="calculadora_imc.html">Calculadora de IMC</a>
+                </nav>
+            </details>
         </details>
     </div>
 
@@ -58,12 +83,16 @@
             </div>
 
             <div id="conversao">
-                <p></p>
+                <div id="classificacao_temperatura"></div>
+                
+                <div id="resultado_conversao">
+                    <p></p>
+                </div>
             </div>
         </main> <br>
 
         <section id="sobre_ferramenta">
-            <h2>Sobre a ferramenta</h2>
+            <h2 class="nome_sessao">Sobre a ferramenta</h2>
 
             <p>Com essa ferramenta, você poderá converter qualquer temperatura válida de uma escala termométrica para outra.</p>
 
@@ -75,7 +104,7 @@
         </section>
     </div>
 
-    <script src="../javascript/geral.js"></script>
+    <script src="../javascript/menu.js"></script>
     <script src="../javascript/conversor_temperatura.js"></script>
 </body>
 </html>

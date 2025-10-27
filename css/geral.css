@@ -8,6 +8,7 @@
 
 header {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -20,16 +21,25 @@ header {
 #titulo {
     display: flex;
     flex-direction: column;
-    
-}
-#barra_menu img {
-    height: 45px;
-    width: 45px;
 }
 
-h1 img {
-    height: 60px;
-    width: 60px;
+#link_github {
+    border-radius: 100px;
+    height: 73px;
+
+    img {
+        height: 70px;
+    }
+}
+
+#barra_menu {
+    text-align: left;
+    width: 100%;
+    margin-bottom: -12px;
+
+    h2 {
+        margin-left: 21px;
+    }
 }
 
 .menu_fechado {
@@ -38,16 +48,20 @@ h1 img {
 
 .menu_aberto {
     position: absolute;
-    height: 100%;
-    width: 250px;
-}
+    padding-bottom: 10px;
+    width: 290px;
 
-.menu_aberto details {
-    margin-left: 30px;
+    details {
+        margin-left: 30px;
 
-    a {
-        text-decoration: none;
-        color: rgb(255, 255, 255);
+        a {
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+        }
+    }
+
+    nav {
+        margin-left: 15px;
     }
 }
 
@@ -56,4 +70,17 @@ h1 img {
     margin: 0 auto;
     max-width: 1200px;
     text-align: center;
+}
+
+section, main, .nome_sessao {
+    border-radius: 10px;
+}
+
+.nome_sessao {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-size: 31px;
+    font-weight: bold;
+    padding: 20px;
+    border: 3px solid rgb(0, 0, 0);
 }

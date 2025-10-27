@@ -1,10 +1,8 @@
-header {
+header, section, main {
     background-color: rgb(173,216,230);
 }
 
 section, main {
-    background-color: rgb(173,216,230);
-    border-radius: 10px;
     font-size: 20px;
     padding: 20px;
 }
@@ -59,6 +57,10 @@ section {
 
 .ferramenta img {
     height: 100px;
+}
+
+a {
+    text-decoration: none;
 }
 
 .ferramenta span {
