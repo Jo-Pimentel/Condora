@@ -6,13 +6,13 @@ const escala_conversao = document.querySelector("#escala_conversao");
 
 const btn_converter_temperatura = document.querySelector("#btn_converter_temperatura");
 
-let zero_absoluto = -273.15, img_classificacao_temperatura;
+let zero_absoluto = -273.15, img_classificacao_temperatura, min_quente, min_frio;
 
-function classificar_temperatura(param_escala, param_temperatura) {
-    if(param_escala.value == "Celsius") {
-        if(param_temperatura > 25) {
-            
-        }
+function classificar_temperatura(param_temperatura, param_min_quente, param_min_frio) {
+    if(param_temperatura >= param_min_quente) {
+        img_classificacao_temperatura = "../imagens/conversor_temperatura/temperatura_quente.png";
+    } else if(param_temperatura <= param_min_frio) {
+        img_classificacao_temperatura = "../imagens/conversor_temperatura/temperatura_fria.png";
     }
 }
 
@@ -28,6 +28,17 @@ escala_atual.addEventListener("change", () => {
 
 escala_conversao.addEventListener("change", () => {
     btn_converter_temperatura.textContent = `Converter para ${escala_conversao.value}`;
+
+    if(escala_conversao.value == "Celsius") {
+        min_quente = 26;
+        min_frio = 20;
+    } else if(escala_conversao.value == "Farenheit") {
+        min_quente = 79;
+        min_frio = 68;
+    } else {
+        min_quente = 299;
+        min_frio = 293;
+    }
 })
 
 btn_converter_temperatura.addEventListener("click", () => {

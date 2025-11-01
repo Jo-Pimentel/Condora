@@ -9,35 +9,10 @@
     <title>Conversor de temperatura</title>
 </head>
 <body>
-    <header>
-        <div id="titulo">
-            <h1>Condora🌡️</h1>
-            <span>Conversor de temperatura</span>
-        </div>
-
-        <div id="barra_menu">
-            <h2>&excl;</h2>
-        </div>
-
-        <!-- <button id="link_github">
-            <a href="https://github.com/Jo-Pimentel/Condora.git" target="_blank"><img src="../imagens/logo_github.png" alt="Logo do Github"></a>
-        </button> -->
-    </header>
-
-    <div id="menu" class="menu_fechado">
-        <hr>
-
-        <details>
-            <summary>Ferramenta</summary>
-
-            <nav>
-                <p><a href="#sobre_ferramenta" class="link_interno">Sobre a ferramenta</a></p>
-            </nav>
-        </details>
-
-        <details>
-            <summary>Outras ferramentas</summary>
-
+    <dialog open>
+        <img src="../imagens/icone_menu.png" alt="Ícone de menu" id="barra_menu">
+        <div id="menu" class="menu_fechado">
+            <hr>
             <details class="menu_ferramentas">
                 <summary>Conversores</summary>
 
@@ -45,7 +20,7 @@
                     <a href="conversor_velocidade.html">Conversor de Velocidade👟</a>
                     <a href="conversor_moedas.html">Conversor de moedas🪙</a>
                 </nav>
-            </details> <hr>
+            </details>
 
             <details class="menu_ferramentas">
                 <summary>Calculadoras</summary>
@@ -56,8 +31,50 @@
                     <a href="calculadora_imc.html">Calculadora de IMC</a>
                 </nav>
             </details>
+        </div>
+    </dialog>
+    <header>
+        <div id="titulo">
+            <h1>Condora🌡️</h1>
+            <span>Conversor de temperatura</span> <hr>
+        </div>
+
+        <nav id="links_internos">
+            <a href="#sobre_ferramenta">Sobre</a>
+            <a href="#pontos_fusao_ebulicao">Pontos</a>
+            <a href="#formulas">Fórmulas</a>
+        </nav>
+
+        <!-- <div id="barra_menu">
+            <h2>!</h2>
+        </div> -->
+
+        <!-- <button id="link_github">
+            <a href="https://github.com/Jo-Pimentel/Condora.git" target="_blank"><img src="../imagens/logo_github.png" alt="Logo do Github"></a>
+        </button> -->
+    </header>
+
+    <!-- <div id="menu" class="menu_fechado">
+        <hr>
+        <details class="menu_ferramentas">
+            <summary>Conversores</summary>
+
+            <nav>
+                <a href="conversor_velocidade.html">Conversor de Velocidade👟</a>
+                <a href="conversor_moedas.html">Conversor de moedas🪙</a>
+            </nav>
         </details>
-    </div>
+
+        <details class="menu_ferramentas">
+            <summary>Calculadoras</summary>
+
+            <nav>
+                <a href="calculadora_media.html">Calculadora de média</a>
+                <a href="calculadora_juros.html">Calculadora de juros</a>
+                <a href="calculadora_imc.html">Calculadora de IMC</a>
+            </nav>
+        </details>
+    </div> -->
 
     <div id="conteudo_pagina">
         <main>
@@ -101,6 +118,33 @@
             <p>As escalas disponíveis são: Celsius, Farenheit e Kelvin.</p>
 
             <p>Os zeros absolutos das escalas são, respectivamente: -273,15°C, -459,67°F e 0 K.</p>
+        </section> <br>
+
+        <section id="pontos_fusao_ebulicao">
+            <table>
+                <th class="nome_sessao" colspan="3">Pontos de fusão e ebulição</th>
+
+                <tr id="nome_coluna">
+                    <td>Escala</td>
+                    <td>Ponto de fusão</td>
+                    <td>Ponto de ebulição</td>
+                </tr>
+                <tr>
+                    <td>Celsius</td>
+                    <td>0°C</td>
+                    <td>100°C</td>
+                </tr>
+                <tr>
+                    <td>Farenheit</td>
+                    <td>32°F</td>
+                    <td>212°F</td>
+                </tr>
+                <tr>
+                    <td>Kelvin</td>
+                    <td>273K</td>
+                    <td>373K</td>
+                </tr>
+            </table>
         </section>
     </div>
 

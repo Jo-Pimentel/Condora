@@ -23,22 +23,20 @@ header {
     flex-direction: column;
 }
 
-#link_github {
-    border-radius: 100px;
-    height: 73px;
-
-    img {
-        height: 70px;
-    }
+#links_internos a {
+    text-decoration: none;
+    font-size: 20px;
 }
 
-#barra_menu {
+dialog {
     text-align: left;
-    width: 100%;
-    margin-bottom: -12px;
+    margin: 50px 0 0 5px;
+    font-size: 20px;
+    border-radius: 10px;
+    padding-top: 5.5px;
 
-    h2 {
-        margin-left: 21px;
+    img {
+        height: 40px;
     }
 }
 
