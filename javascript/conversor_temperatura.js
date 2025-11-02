@@ -6,9 +6,11 @@ const escala_conversao = document.querySelector("#escala_conversao");
 
 const btn_converter_temperatura = document.querySelector("#btn_converter_temperatura");
 
-let zero_absoluto = -273.15, img_classificacao_temperatura, min_quente, min_frio;
+let zero_absoluto = -273.15, min_quente, min_frio;
 
 function classificar_temperatura(param_temperatura, param_min_quente, param_min_frio) {
+    let img_classificacao_temperatura;
+
     if(param_temperatura >= param_min_quente) {
         img_classificacao_temperatura = "../imagens/conversor_temperatura/temperatura_quente.png";
     } else if(param_temperatura <= param_min_frio) {
@@ -77,6 +79,11 @@ btn_converter_temperatura.addEventListener("click", () => {
             simbolo_escala = "°F";
         }
     }
+
+    document.querySelector("#bloco_classificacao_temperatura").style.display = "block";
+    document.querySelector("#classificacao_temperatura").setAttribute("src", classificar_temperatura(temperatura_convertida, min_quente, min_frio));
+
+    console.log(document.querySelector("#bloco_classificacao_temperatura"));
 
     document.querySelector("#conversao").textContent = `${temperatura_convertida}${simbolo_escala}`;
 

@@ -47,15 +47,16 @@ main {
     }
 }
 
-/* #bloco_classificacao_temperatura {
+#bloco_classificacao_temperatura {
     background-color: rgb(255, 255, 255);
     border: 3px solid rgb(0, 0, 0);
     border-radius: 10px;
+    display: block;
 
     img {
         height: 100px;
     }
-} */
+}
 
 .bloco_invisivel {
     display: none;
