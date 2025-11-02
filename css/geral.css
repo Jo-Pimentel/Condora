@@ -42,7 +42,7 @@ dialog {
 
 @media screen and (max-width: 768px) {
     dialog {
-        margin-top: 30px;
+        margin-top: 25px;
 
         img {
             height: 25px;
