@@ -25,17 +25,44 @@ main {
     flex-direction: column;
     align-items: center;
     gap: 10px;
+
+    input {
+        height: 25px;
+        width: 170px;
+        font-size: 20px;
+    }
+
+    select, button {
+        height: 30px;
+        font-size: 18px;
+        font-weight: bold;
+        background-color: rgb(255, 255, 255);
+        border-radius: 5px;
+    }
+
+    button {
+        padding: 0 10px 0 10px;
+        
+
+    }
 }
 
-main input {
-    height: 25px;
-    width: 170px;
-    font-size: 20px;
+/* #bloco_classificacao_temperatura {
+    background-color: rgb(255, 255, 255);
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 10px;
+
+    img {
+        height: 100px;
+    }
+} */
+
+.bloco_invisivel {
+    display: none;
 }
 
-main select, main button {
-    height: 30px;
-    font-size: 18px;
+.bloco_visivel {
+    display: block;
 }
 
 #conversao {
@@ -43,20 +70,18 @@ main select, main button {
 }
 
 #pontos_fusao_ebulicao table {
-    border: 4px solid rgb(0, 0, 0);
-    border-radius: 10px;
+    border: 3px solid rgb(0, 0, 0);
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
 
-    th {
-        border-radius: 0;
-    }
-
     td {
         border: 3px solid rgb(0, 0, 0);
+        padding: 5px;
     }
 }
 
 #nome_coluna td {
-    background-color: rgb(192,192,192);
+    background-color: rgb(105,105,105);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
 }

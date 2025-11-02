@@ -14,6 +14,8 @@ function classificar_temperatura(param_temperatura, param_min_quente, param_min_
     } else if(param_temperatura <= param_min_frio) {
         img_classificacao_temperatura = "../imagens/conversor_temperatura/temperatura_fria.png";
     }
+
+    return img_classificacao_temperatura;
 }
 
 escala_atual.addEventListener("change", () => {
@@ -76,7 +78,7 @@ btn_converter_temperatura.addEventListener("click", () => {
         }
     }
 
-    document.querySelector("#conversao").textContent = temperatura_convertida + simbolo_escala;
+    document.querySelector("#conversao").textContent = `${temperatura_convertida}${simbolo_escala}`;
 
     try {
         if(escala_atual.value == escala_conversao.value) throw "É impossível converter uma temperatura para a escala que ela já está.";
