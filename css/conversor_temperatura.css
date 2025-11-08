@@ -42,12 +42,10 @@ main {
 
     button {
         padding: 0 10px 0 10px;
-        
-
     }
 }
 
-#bloco_classificacao_temperatura {
+/* #bloco_classificacao_temperatura {
     background-color: rgb(255, 255, 255);
     border: 3px solid rgb(0, 0, 0);
     border-radius: 10px;
@@ -56,7 +54,7 @@ main {
     img {
         height: 100px;
     }
-}
+} */
 
 .bloco_invisivel {
     display: none;
@@ -68,6 +66,14 @@ main {
 
 #conversao {
     font-size: 25px;
+}
+
+#classificacao_temperatura {
+    height: 100px;
+    background-color: rgb(255, 255, 255);
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    display: none;
 }
 
 #pontos_fusao_ebulicao table {

@@ -46,6 +46,8 @@ escala_conversao.addEventListener("change", () => {
 })
 
 btn_converter_temperatura.addEventListener("click", () => {
+    document.querySelector("#classificacao_temperatura").style.display = "inline-block";
+    
     let temperatura_convertida, simbolo_escala;
 
     if(escala_atual.value == "Celsius") {
@@ -80,12 +82,9 @@ btn_converter_temperatura.addEventListener("click", () => {
         }
     }
 
-    document.querySelector("#bloco_classificacao_temperatura").style.display = "block";
     document.querySelector("#classificacao_temperatura").setAttribute("src", classificar_temperatura(temperatura_convertida, min_quente, min_frio));
 
-    console.log(document.querySelector("#bloco_classificacao_temperatura"));
-
-    document.querySelector("#conversao").textContent = `${temperatura_convertida}${simbolo_escala}`;
+    document.querySelector("#resultado_conversao").textContent = `${temperatura_convertida}${simbolo_escala}`;
 
     try {
         if(escala_atual.value == escala_conversao.value) throw "É impossível converter uma temperatura para a escala que ela já está.";
@@ -94,6 +93,8 @@ btn_converter_temperatura.addEventListener("click", () => {
 
         if(temperatura_inicial.value < zero_absoluto) throw `Temperatura inválida para ${escala_atual.value}, pois ultrapassa o valor de ${zero_absoluto}`;
     } catch(erro) {
-        document.querySelector("#conversao").textContent = erro;
+        document.querySelector("#classificacao_temperatura").setAttribute("src", "../imagens/interrogacao.png");
+        
+        document.querySelector("#resultado_conversao").textContent = erro;
     }
 })
