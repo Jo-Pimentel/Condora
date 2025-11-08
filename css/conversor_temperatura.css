@@ -7,7 +7,7 @@ header, #menu, section, main {
     color: rgb(255, 255, 255);
 }
 
-section, main {
+/* section, main {
     border-radius: 10px;
     font-size: 20px;
     padding: 20px;
@@ -43,7 +43,7 @@ main {
     button {
         padding: 0 10px 0 10px;
     }
-}
+} */
 
 /* #bloco_classificacao_temperatura {
     background-color: rgb(255, 255, 255);
@@ -56,17 +56,9 @@ main {
     }
 } */
 
-.bloco_invisivel {
-    display: none;
-}
-
-.bloco_visivel {
-    display: block;
-}
-
-#conversao {
+/* #conversao {
     font-size: 25px;
-}
+} */
 
 #classificacao_temperatura {
     height: 100px;

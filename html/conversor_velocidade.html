@@ -9,6 +9,44 @@
     <link rel="stylesheet" href="../css/conversor_velocidade.css">
 </head>
 <body>
+    <dialog open>
+        <img src="../imagens/icone_menu.png" alt="Ícone de menu" id="barra_menu">
+
+        <div id="menu" class="menu_fechado">
+            <hr>
+            <details>
+                <summary>Ferramenta</summary>
+
+                <nav>
+                    <p><a href="#sobre_ferramenta" class="link_interno">Sobre a ferramenta</a></p>
+                    <p><a href="#pontos_fusao_ebulicao" class="link_interno">Pontos de fusão e ebulição</a></p>
+                </nav>
+            </details>
+
+            <details>
+                <summary>Geral</summary>
+                <details class="menu_ferramentas">
+                    <summary>Conversores</summary>
+
+                    <nav>
+                        <a href="conversor_velocidade.html">Conversor de Velocidade👟</a>
+                        <a href="conversor_moedas.html">Conversor de moedas🪙</a>
+                    </nav>
+                </details>
+
+                <details class="menu_ferramentas">
+                    <summary>Calculadoras</summary>
+
+                    <nav>
+                        <a href="calculadora_media.html">Calculadora de média</a>
+                        <a href="calculadora_juros.html">Calculadora de juros</a>
+                        <a href="calculadora_imc.html">Calculadora de IMC</a>
+                    </nav>
+                </details>
+            </details>
+        </div>
+    </dialog>
+
     <header>
         <div id="titulo">
             <h1>Condora👟</h1>
@@ -17,7 +55,37 @@
     </header>
 
     <div id="conteudo_pagina">
-        Hello world
+        <main>
+            <div>
+                <label for="velocidade_inicial">Digite o valor da velocidade que quer converter.</label> <br>
+                <input type="number" id="velocidade_inicial"> <br><br>
+
+                <label for="escala_inicial_velocidade">Qual a escala atual da velocidade digitada?</label> <br>
+                <select id="escala_inicial_velocidade">
+                    <option value="km/h">Kilômetros por hora</option>
+                    <option value="mph">Milhas por hora</option>
+                    <option value="nós">Nós</option>
+                </select> <br><br>
+
+                <label for="escala_conversao_velocidade">Qual a escala que a temperatura será convertida?</label> <br>
+                <select id="escala_conversao_velocidade">
+                    <option value="km/h">Kilômetros por hora</option>
+                    <option value="mph">Milhas por hora</option>
+                    <option value="nós">Nós</option>
+                </select> <br><br>
+
+                <button id="btn_converter_velocidade">Converter para km/h</button>
+            </div>
+
+            <div id="velocidade_conversao">
+                <div id="velocidade_convertida">
+                    <p></p>
+                </div>
+            </div>
+        </main>
     </div>
+
+    <script src="../javascript/menu.js"></script>
+    <script src="../javascript/conversor_velocidade.js"></script>
 </body>
 </html>
