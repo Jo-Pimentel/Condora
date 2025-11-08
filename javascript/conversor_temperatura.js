@@ -15,6 +15,8 @@ function classificar_temperatura(param_temperatura, param_min_quente, param_min_
         img_classificacao_temperatura = "../imagens/conversor_temperatura/temperatura_quente.png";
     } else if(param_temperatura <= param_min_frio) {
         img_classificacao_temperatura = "../imagens/conversor_temperatura/temperatura_fria.png";
+    } else {
+        img_classificacao_temperatura = "../imagens/conversor_temperatura/temperatura_neutra.png";
     }
 
     return img_classificacao_temperatura;
